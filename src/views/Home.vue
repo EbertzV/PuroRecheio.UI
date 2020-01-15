@@ -1,15 +1,17 @@
 <template>
-    <div class="home">
-        <h1 class="display-4">Homepage</h1>
-        <h4 class="display-1">Teste</h4>
-        <p class="headline">Teste</p>
-        <p class="subheading">Teste</p>
-        <p class="caption">Teste</p>
-        <p class="red">Teste</p>
-        <p class="red white--text darken-3 text--darken-2">Teste</p>
-        
-
-    </div>
+    <v-container>
+        <v-card pl-2 class="elevation-12">
+            <v-layout text-xs-center wrap>
+                <v-flex xs12 sm4 md4>
+                    <v-img xs2 sm2 md2 :src="require('../assets/logo_transparent.png')" class="my-3" height="200"></v-img>
+                </v-flex>
+                <v-flex align-self-center>
+                    <h1 class="display-4">Puro Recheio</h1>
+                </v-flex>
+            </v-layout>
+        </v-card>   
+    </v-container>
+    
 </template>
 
 <script>
