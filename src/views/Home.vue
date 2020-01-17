@@ -13,15 +13,12 @@
         </v-layout>
 
         <v-layout >
-                <v-toolbar color="pink lighten-4">
-                    <v-toolbar-title>
-                        <h3></h3>
-                    </v-toolbar-title>
+                <v-toolbar color="pink lighten-4 elevation-12 ">
                     <v-toolbar-items>
-                        <v-btn class="botao" color="pink lighten-4">Página inicial</v-btn>
-                        <v-btn class="botao" color="pink lighten-4" v-on:click="navigate('./catalogo')">Conheça nossos produtos</v-btn>
-                        <v-btn class="botao" color="pink lighten-4">Faça seu pedido</v-btn>
-                        <v-btn class="botao" color="pink lighten-4">Contate-nos</v-btn>  
+                        <v-btn class="botao" color="pink lighten-4" :to="{ name: 'home'}">Página inicial</v-btn>
+                        <v-btn class="botao" color="pink lighten-4" :to="{ name: 'catalogo'}">Conheça nossos produtos</v-btn>
+                        <v-btn class="botao" color="pink lighten-4" :to="{ name: 'pedidos'}">Faça seu pedido</v-btn>
+                        <v-btn class="botao" color="pink lighten-4" :to="{ name: 'contato'}">Contate-nos</v-btn>  
                     </v-toolbar-items>
                     
                 </v-toolbar>
@@ -46,7 +43,8 @@ export default {
     @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
     .botao
     {
-        letter-spacing: 4px;
+        letter-spacing: 3px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     }
 
     .cabecalho{
