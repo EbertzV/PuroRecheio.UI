@@ -37,6 +37,12 @@
                 </v-card>
             </v-flex>
         </v-layout>
+
+        <v-footer fixed color="purple lighten-4">
+            <v-container>    
+                <p>2020 - Puro Recheio</p>
+            </v-container>
+        </v-footer> 
     </v-card> 
 </template>
 

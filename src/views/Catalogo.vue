@@ -30,20 +30,47 @@
                 <v-card>
                     <v-card-title class="cabecalho-conteudo">Conheça nossos produtos: </v-card-title>
                     <v-card-text>
-                        <v-badge>
-
-                        </v-badge>
+                        <v-layout>
+                            <v-flex class="card" v-for="p in produtos" v-bind:key="p.id">
+                                {{p.sabor}}
+                                {{p.tamanho}}
+                                {{p.imagem}}
+                                {{p.valor}}
+                            </v-flex>
+                        </v-layout>
                     </v-card-text>
                 </v-card>
             </v-flex>
         </v-layout>
+
+        <v-footer fixed color="purple lighten-4">
+            <v-container>    
+                <p>2020 - Puro Recheio</p>
+            </v-container>
+        </v-footer> 
     </v-card> 
 </template>
 
 <script>
-
+import axios from "axios";
 export default {
+    data(){
+        return{
+            produtos: [
 
+            ]
+        }
+    },
+    mounted(){
+       axios({
+           method: "GET",
+           "url": "http://purorecheio-info.azurewebsites.net/api/Produtos"
+       }).then(result =>{   
+                this.produtos = result.data;
+            }, error => {
+                this.produtos = error;
+            });
+    }
 }
 </script>
 <style lang="scss">

@@ -28,7 +28,13 @@
                 <v-img :src="require('../assets/facebook_cover_photo_2.png')"></v-img>
             </v-flex>
         </v-layout>
-    </v-card> 
+
+        <v-footer fixed color="purple lighten-4">
+            <v-container>    
+                <p>2020 - Puro Recheio</p>
+            </v-container>
+        </v-footer> 
+    </v-card>    
 </template>
 
 <script>
