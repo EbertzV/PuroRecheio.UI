@@ -32,10 +32,12 @@
                     <v-card-text>
                         <v-layout>
                             <v-flex class="card" v-for="p in produtos" v-bind:key="p.id">
-                                <v-img :src=p.imagem xs2 sm2 md2 class="my-3"/>
-                                <h4>Sabor: {{p.sabor}}</h4>
-                                <h4>Tamanho: {{p.tamanho}}</h4>
-                                <h4>Sabor: {{p.valor}}</h4>
+                                <v-card elevation="12" style="padding: 10px; margin-right: 15px;">
+                                    <v-img xs2 sm2 md2 contain height="250" :src=p.imagem />
+                                    <h4>Sabor: {{p.sabor}}</h4>
+                                    <h4>Tamanho: {{p.tamanho}}</h4>
+                                    <h4>Valor: R${{p.valor}}</h4>
+                                </v-card>
                             </v-flex>
                         </v-layout>
                     </v-card-text>
